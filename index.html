@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name ="author" content="SALIFYANJI SILWENGA">
+	<title>MOTIVATIONAL QUOTES BY SALIFYANJI SILWENGA</title>
+	<style>
+	  body{
+    background-color: RGB(197 227 132);
+    margin: 0;
+          }
+      header{
+             background-color: RGB(111 0 255);
+             text-align: center;
+             padding: 60px;
+             border: solid 2px;
+            }
+      header p{
+              font-weight: bold;
+              font-style: italic;
+              font-size: 1.4em;
+             }
+      .quote-container{
+                       text-align: center;
+                       border: double;
+                       padding: 40px;
+                       margin: 70px;
+                       background-color: RGB(248 248 255);
+                      }
+      #quote{
+             font-size: 1.3em;
+             font-weight: bold;
+            }
+      #author{
+              font-size: 1.2em;
+             }
+      #new-quote-btn{
+                     padding: 10px;
+                     font-size: 1em;
+                     border: solid;
+                     cursor: pointer;
+                     }
+      footer{
+             text-align: center;
+             padding: 30px;
+             background: #333;
+             font-size: 1em;
+             color: #fff;
+}
+	</style>
+  </head>
+  <body>
+   <header>
+       <h1>MOTIVATIONAL QUOTES</h1>
+       <p>"Motivate yourself and rise and strive hard for a better tomorrow"</p>
+   </header>
+   <div class="quote-container">
+   <main>
+      <p id="quote">"Put God first in everything you do"</p>
+      <p id="author">- Denzel Washington</p>
+      <button id="new-quote-btn" onclick="displayNewQuote()">New Quote</button>
+   </div>
+   <footer>
+       <p>&copy; 2024 SALIFYANJI SILWENGA.All rights reserved.</p>
+   </footer>
+    <script>
+      // Array of quotes and authors
+      const quotes = [
+        {
+           quote: "Put God first in everything you do",
+           author: "- Denzel Washington"
+        },
+        {
+           quote: "Small things build up big things,utilize anything you have",
+           author: "- Salifyanji"
+        },
+        {
+           quote: "The only way to do great work is to love what you do",
+           author: "- Steve Jobs"
+        },
+        {
+           quote: "Success is not final, failure is not fatal: It is the courage to continue that counts",
+           author: "- Winston Churchill"
+        },
+        {
+           quote: "You miss 100% of the shots you don't take",
+           author: "- Wayne Gretzky"
+        }
+      ];
+
+          // Initialize quote index to 1 (to skip the first quote)
+          let quoteIndex = 1;
+
+          // Function to display new quote
+          function displayNewQuote() {
+          // Get the quote and author elements
+          const quoteElement = document.getElementById("quote");
+          const authorElement = document.getElementById("author");
+
+          // Display the next quote and author
+          quoteElement.textContent = quotes[quoteIndex].quote;
+          authorElement.textContent = quotes[quoteIndex].author;
+
+          // Increment the quote index
+          quoteIndex = (quoteIndex + 1) % quotes.length;
+        }
+    </script>
+  </body>
+</html>
+    
+    
